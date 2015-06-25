@@ -1,4 +1,4 @@
-angular.module('myFitMate')
+myApp
 .controller('MainController', [
     
 '$ionicSideMenuDelegate', 'MainModel', '$state', '$timeout', 'UserData',

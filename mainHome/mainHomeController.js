@@ -1,4 +1,4 @@
-angular.module('myFitMate')
+myApp
 .controller('MainHomeController', [
 'MainHomeModel', 
 function (MainHomeModel){

@@ -1,5 +1,5 @@
-var myApp = angular.module('myFitMate');
-myApp.directive('daumMap', [
+myApp
+.directive('daumMap', [
 'DaumMapModel', 'Places',
 function (DaumMapModel, Places){
     return {

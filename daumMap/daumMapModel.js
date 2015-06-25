@@ -1,4 +1,5 @@
-myApp.factory('DaumMapModel', [
+myApp
+.factory('DaumMapModel', [
 
 function (){
     return {
