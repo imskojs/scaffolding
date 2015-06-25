@@ -2,8 +2,11 @@ angular.module('myFitMate')
 .controller('MainController', [
     
 '$ionicSideMenuDelegate', 'MainModel', '$state', '$timeout', 'UserData',
+'$ionicNavBarDelegate',
 
-function($ionicSideMenuDelegate, MainModel, $state, $timeout, UserData){
+function($ionicSideMenuDelegate, MainModel, $state, $timeout, UserData,
+$ionicNavBarDelegate
+){
 
     var Main = this;
 //==========================================================================
@@ -17,7 +20,7 @@ function($ionicSideMenuDelegate, MainModel, $state, $timeout, UserData){
     }
 
     Main.sideMenuLists = MainModel.sideMenuLists;
-    
+
     Main.menuSelectHandler = function (state){
         $ionicSideMenuDelegate.toggleLeft(false);
         $timeout(function (){
