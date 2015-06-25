@@ -23,7 +23,7 @@ gulp.task('default', ['sass', 'js']);
 gulp.task('sass', function(done) {
   gulp.src([
     './scss/ionic.app.scss', 
-    './scss/ionic.app.custom.scss', 
+    './scss/common.scss', 
     './www/state/**/*.scss'
   ])
     .pipe(sass({
