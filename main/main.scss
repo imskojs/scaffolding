@@ -1,0 +1,40 @@
+#main {
+    $sideMenuBgColor: #c094df;
+    $sideMenuHeaderHeight: 25vw;
+
+    $sideMenuListHeight: 12.5vw;
+    $sideMenuListColor: white;
+
+    $sideMenuSelectedListColor: #831bd4;
+    $sideMenuSelectedListBgColor: white;
+
+    $sideMenuFooterBgColor: #c094df;
+    // Side Menu Styling //
+    .side-menu-content {
+        background: $sideMenuBgColor;
+        ion-item.side-menu-header {
+            background: $sideMenuBgColor;
+            height: $sideMenuHeaderHeight;
+        }
+        ion-item.menu-list-row {
+            background: $sideMenuBgColor;
+            height: $sideMenuListHeight; 
+            padding-left: 5%;
+            .menu-list-text {
+                color: $sideMenuListColor;
+            }
+            &.selected {
+                background: $sideMenuSelectedListBgColor;
+                .menu-list-text {
+                    color: $sideMenuSelectedListColor;
+                }
+            }
+        }
+    }
+    .side-menu-footer {
+        background: $sideMenuFooterBgColor;
+        .side-menu-footer-icon {
+            color: white;
+        }
+    }
+}

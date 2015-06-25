@@ -9,7 +9,7 @@ var rename = require('gulp-rename');
 var sh = require('shelljs');
 
 var paths = {
-  sass: ['./scss/**/*.scss', './www/states/**/*.scss'],
+  sass: ['./scss/**/*.scss', './www/state/**/*.scss'],
   js: [
     './www/js/config/**/*.js', 
     './www/js/service/**/*.js',
