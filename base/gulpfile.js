@@ -26,10 +26,11 @@ gulp.task('sass', function(done) {
     './scss/common.scss', 
     './www/state/**/*.scss'
   ])
+    .pipe(concat('ionic.app.all.scss'))
+    .pipe(gulp.dest('./scss/'))
     .pipe(sass({
       errLogToConsole: true
     }))
-    .pipe(concat('ionic.app.css'))
     .pipe(gulp.dest('./www/css/'))
     .pipe(minifyCss({
         keepSpecialComments: 0
