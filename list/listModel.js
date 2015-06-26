@@ -19,8 +19,9 @@ function (){
                 title: 'This is list 2',
                 content: 'This is the content of list 2'
             }
-        ]
+        ],
+        currentItem: {}
     };
-    
+
     return ListModel;
 }]);
