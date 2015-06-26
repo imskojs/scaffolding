@@ -27,11 +27,11 @@ gulp.task('sass', function(done) {
     './www/state/**/*.scss'
   ])
     .pipe(concat('ionic.app.all.scss'))
-    .pipe(gulp.dest('./scss/'))
+    // .pipe(gulp.dest('./scss/'))
     .pipe(sass({
       errLogToConsole: true
     }))
-    .pipe(gulp.dest('./www/css/'))
+    // .pipe(gulp.dest('./www/css/'))
     .pipe(minifyCss({
         keepSpecialComments: 0
     }))
@@ -49,7 +49,7 @@ gulp.task('js', function(done){
     './www/state/**/*.js'
   ])
   .pipe(concat('all.js'))
-  .pipe(gulp.dest('./www/js/'))
+  // .pipe(gulp.dest('./www/js/'))
   .pipe(uglify())
   .pipe(rename({ extname: '.min.js' }))
   .pipe(gulp.dest('./www/js/'))
