@@ -46,6 +46,7 @@ gulp.task('js', function(done){
     './www/js/service/**/*.js',
     './www/js/directive/**/*.js', 
     './www/indexController.js',
+    './www/indexModel.js',
     './www/state/**/*.js'
   ])
   .pipe(concat('all.js'))
