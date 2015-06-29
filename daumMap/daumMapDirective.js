@@ -32,10 +32,10 @@ function (DaumMapModel, Places){
 //==========================================================================
             // Calc nearby locations within a category function
             var calcNearBy = function (lat, lng, category) {
-                var minLat = lat - .3;
-                var maxLat = lat + .3;
-                var minLng = lng - .6;
-                var maxLng = lng + .6;
+                var minLat = lat - 0.3;
+                var maxLat = lat + 0.3;
+                var minLng = lng - 0.6;
+                var maxLng = lng + 0.6;
                 var params = {
                     category: category,
                     minLat: minLat,
@@ -64,7 +64,7 @@ function (DaumMapModel, Places){
                             title: String(i),
                             image: markerImg,
                             clickable: true
-                        })
+                        });
                         daum.maps.event.addListener(marker, 'click', function(){
                             var marker = this;
                             scope.$apply(function (){
@@ -83,7 +83,7 @@ function (DaumMapModel, Places){
                         });
                         // Save converted place with click event added.
                         DaumMapModel.markers.push(marker);
-                    })
+                    });
                     //TODO: ,function err(){}
                 });
             };
@@ -116,16 +116,16 @@ function (DaumMapModel, Places){
                     map.panTo( new daum.maps.LatLng(
                         data.places[0].latitude,
                         data.places[0].longitude
-                    ))
+                    ));
                     var searchParams = calcNearBy(
                         data.places[0].latitude,
                         data.places[0].longitude,
                         DaumMapModel.category
                     );
                     drawMarkers(searchParams);
-                })
-            }
+                });
+            };
         }
-    }
+    };
 
-}])
+}]);

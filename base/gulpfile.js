@@ -50,18 +50,37 @@ gulp.task('js', function(done){
     './www/state/**/*.js'
   ])
   .pipe(concat('all.js'))
-  // .pipe(gulp.dest('./www/js/'))
+  .pipe(gulp.dest('./www/js/'))
   .pipe(uglify())
   .pipe(rename({ extname: '.min.js' }))
   .pipe(gulp.dest('./www/js/'))
   .on('end', done);
-})
+});
 
 gulp.task('watch', function() {
   gulp.watch(paths.sass, ['sass']);
   gulp.watch(paths.js, ['js']);
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//==========================================================================
+//              IONIC BUILT
+//==========================================================================
 gulp.task('install', ['git-check'], function() {
   return bower.commands.install()
     .on('log', function(data) {
