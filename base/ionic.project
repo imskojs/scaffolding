@@ -1,0 +1,15 @@
+{
+  "name": "",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "js",
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*.html",
+    "www/js/all.js",
+    "www/css/ionic.app.all.min.css",
+    "!www/lib/**/*"
+  ]
+}
